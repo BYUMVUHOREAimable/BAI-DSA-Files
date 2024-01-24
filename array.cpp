@@ -73,10 +73,10 @@
 //  return 0;
 //}
 
-// C++ program to illustrate the
-// iterators in vector
+// C++ program to illustrate the
+// iterators in vector
 #include <iostream>
-#include <vector>
+#include <vector>
 using namespace std;
 int main(){
 vector<int> g1;

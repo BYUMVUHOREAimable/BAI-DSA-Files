@@ -1,0 +1,1 @@
+By reading the code of filecreate you can get knowledge about how to create a file

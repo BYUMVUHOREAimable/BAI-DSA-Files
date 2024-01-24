@@ -1,39 +1,41 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-struct Node {
-    int data;
-    Node* next;
+//template <typename T>
+
+struct Student {
+    int age;
+    string name;
+    string school;
+    Student *next;
+
+    Student() {}
+
+    Student(int a, string n, string s) {
+        age = a;
+        name = n;
+        school = s;
+        next = NULL;
+    }
 };
 
-void printList(Node* head) {
+void printList(Student *head) {
     // To print a linked list, we only need to know the first element called head
     while (head != NULL) {
-        cout << head->data << " ";
+        cout << "Age: " << head->age << ", Name: " << head->name << ", School: " << head->school << " -> ";
         head = head->next;
     }
-    cout << endl;
+    cout << "NULL" << endl;
 }
 
 int main() {
-    Node* n1 = new Node();
-    n1->data = 10;
-
-    Node* n2 = new Node();
-    n2->data = 15;
-
-    Node* n3 = new Node();
-    n3->data = 20;
+    Student* n1 = new Student(10, "Mary", "RCA");
+    Student* n2 = new Student(20, "Peter", "RCA");
+    Student* n3 = new Student(30, "Divine", "RCA");
 
     n1->next = n2;
     n2->next = n3;
-    n3->next = NULL;
 
-    Node* head = n1;
-    cout << "The data from head: ";
-    printList(head);
-    cout << endl;
-    cout << "The data from n1: ";
     printList(n1);
 
     return 0;
