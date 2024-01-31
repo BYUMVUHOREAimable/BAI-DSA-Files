@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 struct Student{
 int id;  
@@ -7,28 +7,28 @@ string school;
 string level;   
 char group;
 };
+void print_student(Student s){
+cout<<s.id<<endl;
+cout<<s.name<<endl;
+cout<<s.school<<endl;
+cout<<s.level<<endl;
+cout<<s.group<<endl;
+}
 
-int main(){
-	Student student;
-    cout << "Enter i: ";
-    cin>>student.id;
-    cin.ignore();
-    cout << "Enter name: ";
-    getline(cin,student.name);
-    cout << "Enter school: ";
-    getline(cin,student.school);
-    cout << "Enter level: ";
-    getline(cin,student.level);
-    cout << "Enter group: ";
-    cin>>student.group;
-    cout<<"Display student Information:"<<endl;
-    cout<<student.id<<endl;
-    cout<<student.name<<endl;
-    cout<<student.school<<endl;
-    cout<<student.level<<endl;
-    cout<<student.group<<endl;
+Student make(Student mj){
+mj.name="Mugabo Javis";
+mj.id=32;
+mj.school="RCA";
+mj.level="Year2";
+mj.group='A';
+return  mj;
+}
 
-
-	
-	return 0;
+int main()
+{
+  Student st;
+  Student s=make(st);
+cout<<"Display student Information:"<<endl;
+print_student(s);
+return 0;
 }
