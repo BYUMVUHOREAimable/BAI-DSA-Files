@@ -1,5 +1,4 @@
 #include <iostream>
-
 // Node class
 class Node {
 public:
