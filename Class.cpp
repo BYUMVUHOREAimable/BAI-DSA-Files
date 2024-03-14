@@ -1,36 +1,58 @@
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//
+//// Create a Car class with some attributes
+//class Car {
+//  public:
+//    string brand;
+//    string model;
+//    int year;
+//};
+//
+//int main() {
+//	// Create an object of Car
+//  Car carObj1;
+//  carObj1.brand = "BMW";
+//  carObj1.model = "X5";
+//  carObj1.year = 1999;
+//
+//// Create another object of Car
+//  Car carObj2;
+//  carObj2.brand = "Ford";
+//  carObj2.model = "Mustang";
+//  carObj2.year = 1969;
+//  
+//// Print attribute values
+//  cout << carObj1.brand << " " << carObj1.model << " " << carObj1.year << "\n";
+//  cout << carObj2.brand << " " << carObj2.model << " " << carObj2.year << "\n";
+//  return 0;
+//}
+
+//Encapsulation
+//To access a private attribute, use public "get" and "set" methods
 #include <iostream>
 using namespace std;
-class Student{
-	public:
-int id;  
-string name; 
-string school; 
-string level;   
-char group;
+
+class Employee {
+  private:
+    // Private attribute
+    int salary;
+
+  public:
+    // Setter
+    void setSalary(int s) {
+      salary = s;
+    }
+    // Getter
+    int getSalary() {
+      return salary;
+    }
 };
-void print_student(Student s){
-cout<<s.id<<endl;
-cout<<s.name<<endl;
-cout<<s.school<<endl;
-cout<<s.level<<endl;
-cout<<s.group<<endl;
-}
 
-Student make(Student mj){
-mj.name="Mugabo Javis";
-mj.id=32;
-mj.school="RCA";
-mj.level="Year2";
-mj.group='A';
-return  mj;
+int main() {
+  Employee myObj;
+  myObj.setSalary(50000);
+  cout << myObj.getSalary();
+  return 0;
 }
-
-int main()
-{
-  Student st;
-  Student s=make(st);
-cout<<"Display student Information:"<<endl;
-print_student(s);
-return 0;
-}
-

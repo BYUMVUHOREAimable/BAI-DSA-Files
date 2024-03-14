@@ -1,46 +1,113 @@
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//
+//int main() {
+//  struct Person { //Person on this line can be there or not
+//  int age;
+//  string name;
+//  float salary;
+//  }Person1,Person2;
+//  
+//  cout<<"Information on first person: \n";
+//  cout<<"---------------------------\n";
+//  
+//  cout<<"Enter your names: ";
+//  getline(cin,Person1.name);
+//  
+//  cout<<"Enter your age: ";
+//  cin>>Person1.age;
+//  
+//  cout<<"Enter your salary: ";
+//  cin>>Person1.salary;
+//  
+//  cout<<"Information on first person: \n";
+//  cout<<"---------------------------\n";
+//  
+//  cout<<"Enter your age: ";
+//  cin>>Person2.age;
+//  
+//  cout<<"Enter your names: ";
+//  cin>>Person2.name;
+//  
+//  
+//  cout<<"Enter your salary: ";
+//  cin>>Person2.salary;
+//  
+//  
+//  cout<<"You are "<<Person1.name<<" who is "<<Person1.age<<" years old" <<" and your salary is "<<Person1.salary<<"\n";
+//  cout<<"You are "<<Person2.name<<" who is "<<Person2.age<<" years old" <<" and your salary is "<<Person2.salary<<" Thank you.";
+//  
+//  return 0;
+//}
+
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//
+//// Declare a structure named "car"
+//struct car {
+//  string brand;
+//  string model;
+//  int year;
+//};
+//
+//int main() {
+//  // Create a car structure and store it in myCar1;
+//  car myCar1;
+//  myCar1.brand = "BMW";
+//  myCar1.model = "X5";
+//  myCar1.year = 1999;
+//
+//  // Create another car structure and store it in myCar2;
+//  car myCar2;
+//  myCar2.brand = "Ford";
+//  myCar2.model = "Mustang";
+//  myCar2.year = 1969;
+// 
+//  // Print the structure members
+//  cout << myCar1.brand << " " << myCar1.model << " " << myCar1.year << "\n";
+//  cout << myCar2.brand << " " << myCar2.model << " " << myCar2.year << "\n";
+// 
+//  return 0;
+//}
+
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//
+//int main() {
+//  string food = "Pizza";
+//
+//  cout << &food;
+//  return 0;
+//}
+
 #include <iostream>
 #include <string>
-
 using namespace std;
 
-struct Student {
-    string name;
-    int age;
-    string school;
-
-    Student() {}
-
-    Student(string n, int a, string sch) {
-        name = n;
-        age = a;
-        school = sch;
-    }
-};
-
 int main() {
-    // Creating and initializing a student using a parameterized constructor
-    struct Student st("John", 12, "RCA");
-    cout << "Name: " << st.name << ", Age: " << st.age << ", School: " << st.school << endl;
+  string food = "Pizza";
+  string* ptr = &food;
 
-    // Using default constructor and setting values individually
-    Student st2;
-    st2.name = "Mary";
-    st2.age = 12;
-    st2.school = "RCA";
-    cout << "Name: " << st2.name << ", Age: " << st2.age << ", School: " << st2.school << endl;
+  // Output the value of food
+  cout << food << "\n";Pizza
 
-    // Using dynamic allocation and arrow operator
-    Student* st3 = new Student("Victor", 18, "RCA");
-    cout << "Name: " << st3->name << ", Age: " << st3->age << ", School: " << st3->school << endl;
-    delete st3; // Freeing dynamically allocated memory
+  // Output the memory address of food
+  cout << &food << "\n";//address of food
 
-    // Using alternative constructor syntax
-    Student st4 = Student("Divine", 14, "RCA");
-    cout << "Name: " << st4.name << ", Age: " << st4.age << ", School: " << st4.school << endl;
-
-    // Uncommented code with alternative constructor syntax
-    // Student s{"Peter",15,"RCA"};
-    // Student s={"Peter",16,"RCA"};
-
-    return 0;
+  // Access the memory address of food and output its value
+  cout << *ptr << "\n";Pizza
+  
+  // Change the value of the pointer
+  *ptr = "Hamburger";
+  
+  // Output the new value of the pointer
+  cout << *ptr << "\n";//Hamburger
+  
+  // Output the new value of the food variable
+  cout << food << "\n";//Hamburger
+  return 0;
 }
+
