@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/BYUMVUHORE Aimable/Desktop/RCA_class_problems-2022",
-      "program": "c:/Users/BYUMVUHORE Aimable/Desktop/RCA_class_problems-2022/build/Debug/outDebug",
+      "cwd": "c:/Users/BYUMVUHORE Aimable/Documents/C++ projects/RCA_class_problems-2022",
+      "program": "c:/Users/BYUMVUHORE Aimable/Documents/C++ projects/RCA_class_problems-2022/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
